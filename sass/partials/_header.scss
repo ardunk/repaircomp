@@ -1,0 +1,136 @@
+header {
+  width: 100%;
+  display: block;
+  position: absolute;
+  z-index: 1;
+  background-color: $section-blue-transp;
+  @media (max-width: 767px) {
+    background: none;
+  }
+}
+
+.header-layout {
+  @include flex-center-y;
+  position: relative;
+  width: 100%;
+  @media (max-width: 767px) {
+    align-items: flex-start;
+  }
+}
+
+.header-layout-logo {
+  @include flex-center-xy;
+  height: 48px;
+  width: 58px;
+  margin: 28px 30px 28px 0;
+  @media (max-width: 767px) {
+    height: 20px;
+    width: 24px;
+    margin: 24px 0 0 10px;
+  }
+
+  h1 {
+    text-indent: -9999px;
+  }
+}
+
+.header-layout-navbar {
+  display: flex;
+  font-family: 'Abhaya Libre', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 25px;
+  color: $font-dark;
+
+  &.open {
+    display: flex;
+  }
+  @media (max-width: 767px) {
+    display: none;
+    background-color: $section-light;
+    width: 130px;
+    padding: 24px 0 10px;
+    margin: 20px 10px 0 0;
+    flex-direction: column;
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+.header-layout-navbar-item {
+  margin: 0 48px 0 0;
+  transition: 200ms;
+  @media (max-width: 767px) {
+    margin: 0 auto 8px;
+
+    &:nth-child(4) {
+      display: none;
+    }
+  }
+
+  &:last-child {
+    margin: 0;
+    @media (max-width: 767px) {
+      margin: 0 auto;
+    }
+  }
+
+  &:hover {
+    color: $font-light;
+    @media (max-width: 767px) {
+      color: $font-dark;
+    }
+  }
+}
+
+.header-layout-phone {
+  @include flex-center-y;
+  margin: 0 0 0 auto;
+  @media (max-width: 1023px) {
+    display: none;
+  }
+}
+
+.header-layout-phone-number {
+  font-family: Roboto, sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 30px;
+  text-align: center;
+
+  a {
+    transition: 200ms;
+
+    &:hover {
+      color: $font-light;
+    }
+  }
+}
+
+.header-layout-phone-icon {
+  @include flex-center-xy;
+  height: 32px;
+  width: 32px;
+  margin: 0 0 0 26px;
+}
+
+.header-layout-button {
+  display: none;
+
+  &.open {
+    background-image: url("../images/icons/icon-close.png");
+  }
+  @media (max-width: 767px) {
+    display: block;
+    position: absolute;
+    top: 24px;
+    right: 12px;
+    cursor: pointer;
+    width: 24px;
+    height: 20px;
+    background-image: url("../images/icons/icon-menu.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: 200ms;
+  }
+}

@@ -1,0 +1,122 @@
+.feedback-layout {
+  position: relative;
+  width: 810px;
+  margin: 0 0 70px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px 0 rgba(198, 192, 192, 0.25);
+
+  @media (max-width: 1023px) {
+    width: 650px;
+  }
+
+  @media (max-width: 767px) {
+    width: 280px;
+    margin: 0 0 34px;
+    box-shadow: 0 2px 4px 0 rgba(198, 192, 192, 0.25);
+  }
+
+  @media (max-width: 374px) {
+    width: 270px;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 318px;
+    height: 318px;
+    border-radius: 50%;
+    right: -10%;
+    top: 8%;
+    border: 13px solid rgba(111, 185, 248, 0.1);
+    @media (max-width: 767px) {
+      width: 112px;
+      height: 112px;
+      right: -14%;
+      top: 22%;
+      border: 4px solid rgba(111, 185, 248, 0.1);
+    }
+  }
+}
+
+.feedback-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  @media (max-width: 767px) {
+    width: 15px;
+    height: 15px;
+  }
+
+  &.left {
+    left: -95px;
+    @media (max-width: 1023px) {
+      left: -45px;
+    }
+    @media (max-width: 767px) {
+      left: -20px;
+    }
+  }
+
+  &.right {
+    right: -95px;
+    @media (max-width: 1023px) {
+      right: -45px;
+    }
+    @media (max-width: 767px) {
+      right: -20px;
+    }
+  }
+}
+
+.feedback-layout-content {
+  box-sizing: border-box;
+  padding: 0 80px;
+  @media (max-width: 1023px) {
+    padding: 0 30px;
+  }
+  @media (max-width: 374px) {
+    padding: 0 10px;
+  }
+}
+
+.feedback-layout-content-image {
+  width: 100px;
+  height: 100px;
+  margin: 48px auto 18px auto;
+  @media (max-width: 767px) {
+    width: 36px;
+    height: 36px;
+    margin: 18px auto 10px auto;
+  }
+}
+
+.feedback-layout-content-name {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  color: $font-dark;
+  @media (max-width: 767px) {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+
+.feedback-layout-content-text {
+  margin: 18px 0 48px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 34px;
+  color: $font-dark;
+  @media (max-width: 767px) {
+    margin: 10px 0 18px;
+    font-size: 12px;
+    line-height: 14px;
+  }
+}

@@ -1,0 +1,91 @@
+.features-layout {
+  @include flex-center-xy;
+  width: 100%;
+  height: 435px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0 0 66px;
+  @media (max-width: 1023px) {
+    height: auto;
+  }
+  @media (max-width: 767px) {
+    margin: 0 0 40px;
+  }
+}
+
+.features-layout-item {
+  @include flex-center-y;
+  width: 50%;
+  height: 33%;
+  @media (max-width: 1023px) {
+    width: 90%;
+    justify-content: center;
+    margin: 0 0 40px;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+  @media (max-width: 767px) {
+    width: 96%;
+  }
+
+  &:nth-child(n + 4) {
+    justify-content: flex-end;
+    @media (max-width: 1023px) {
+      justify-content: center;
+    }
+  }
+}
+
+.features-layout-item-icon {
+  @include flex-center-xy;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  margin: 0 24px 0 0;
+  background-color: $blue;
+  @media (max-width: 767px) {
+    height: 48px;
+    width: 48px;
+    margin: 0 12px 0 0;
+
+    img {
+      max-height: 50%;
+      max-width: 50%;
+    }
+  }
+}
+
+.features-layout-item-text {
+  @include flex-center-x;
+  flex-direction: column;
+  width: 75%;
+  @media (max-width: 1023px) {
+    width: 80%;
+  }
+}
+
+.features-layout-item-title {
+  font-family: 'Abhaya Libre', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 34px;
+  color: $font-dark;
+  @media (max-width: 767px) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.features-layout-item-desc {
+  font-family: 'Abhaya Libre', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  color: $font-dark-transp;
+  @media (max-width: 767px) {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}

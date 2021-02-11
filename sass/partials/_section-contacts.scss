@@ -1,0 +1,124 @@
+.section-contacts {
+  background-color: $section-blue;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 232px;
+    height: 232px;
+    border-radius: 50%;
+    left: 15%;
+    top: -118px;
+    background-color: $white-transp;
+    @media (max-width: 767px) {
+      width: 68px;
+      height: 68px;
+      left: 20%;
+      top: -16px;
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 362px;
+    height: 362px;
+    border-radius: 50%;
+    right: -92px;
+    bottom: -84px;
+    background-color: $white-transp;
+    @media (max-width: 767px) {
+      width: 68px;
+      height: 68px;
+      right: -16px;
+      bottom: -16px;
+    }
+  }
+}
+
+.contacts-layout {
+  @include flex-center-y;
+  width: 100%;
+  margin: 0 0 68px;
+  @media (max-width: 767px) {
+    flex-direction: column;
+    margin: 0 0 28px;
+  }
+}
+
+.contacts-layout-item {
+  margin: 0 0 50px;
+  @media (max-width: 767px) {
+    margin: 0 0 20px;
+  }
+
+  &:last-child {
+    margin: 0;
+    @media (max-width: 767px) {
+      margin: 0 0 20px;
+    }
+  }
+}
+
+.contacts-layout-item-title {
+  margin: 0 0 30px;
+  font-family: Roboto, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  color: $font-dark;
+  @media (max-width: 767px) {
+    margin: 0 0 2px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+.contacts-layout-item-desc {
+  @include flex-center-y;
+}
+
+.contacts-layout-item-icon {
+  @include flex-center-xy;
+  width: 40px;
+  height: 40px;
+  margin: 0 24px 0 0;
+  @media (max-width: 767px) {
+    width: 16px;
+    height: 16px;
+    margin: 0 6px 0 0;
+  }
+}
+
+.contacts-layout-item-text {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 26px;
+  color: $font-dark;
+  @media (max-width: 767px) {
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  a {
+    transition: 200ms;
+
+    &:hover {
+      color: $font-light;
+    }
+  }
+}
+
+.contacts-layout-map {
+  @include flex-center-xy;
+  z-index: 1;
+  max-height: 430px;
+  width: 538px;
+  margin: 0 0 0 auto;
+  @media (max-width: 767px) {
+    width: 217px;
+    margin: 0;
+  }
+}

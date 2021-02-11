@@ -1,0 +1,58 @@
+.section-banner {
+  height: 100vh;
+  min-height: 666px;
+  background-image: url("../images/banner.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.banner-content {
+  @include flex-center-y;
+  flex-direction: column;
+  width: 630px;
+  margin: 222px 0 0 auto;
+  @media (max-width: 1023px) {
+    margin: 222px 0 0;
+  }
+  @media (max-width: 767px) {
+    max-width: 96%;
+    margin: 181px 0 0 0;
+  }
+}
+
+.banner-text {
+  font-family: 'Secular One', sans-serif;
+  font-size: 46px;
+  font-weight: 400;
+  line-height: 62px;
+  text-align: center;
+  text-shadow: -1px -1px 3px #edeef0, 1px -1px 3px #edeef0, -1px 1px 3px #edeef0, 1px 1px 3px #edeef0;
+  @media (max-width: 767px) {
+    font-size: 30px;
+    line-height: 42px;
+  }
+}
+
+.banner-button {
+  @include flex-center-xy;
+  height: 64px;
+  width: 370px;
+  margin: 24px 0 0;
+  border-radius: 50px;
+  background-color: $blue;
+  color: $font-light;
+  font-family: 'Abhaya Libre', sans-serif;
+  font-size: 26px;
+  font-weight: 600;
+  transition: 200ms;
+  @media (max-width: 767px) {
+    height: 34px;
+    width: 174px;
+    margin: 50px 0 0;
+    font-size: 14px;
+  }
+
+  &:hover {
+    background-color: $dark-blue;
+  }
+}
